@@ -100,6 +100,16 @@ void merge(int a[], int LF, int LL,  int RF, int RL){
     delete  []temp;
 }
 
+// Merge Sort
+void mergeSort(int a[], int first, int last){
+    if(first < last){
+        int middle = (first + last) / 2;
+        mergeSort(a, first, middle);
+        mergeSort(a,  middle+1, last);
+        merge(a, first, middle, middle + 1, last);
+    }
+}
+
 // Reading data from ALL ARRAYS THAT CONTAIN 128 INTEGERS
 int readDataFromFiles(const string& filename, int data[]) {
     ifstream file(filename);
