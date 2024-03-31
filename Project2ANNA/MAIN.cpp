@@ -84,6 +84,7 @@ void merge(int a[], int LF, int LL,  int RF, int RL){
     int j = 0;
 
     while(LF <= LL &&  RF <= RL){
+        comparisons++; //increment comparisons
         if(a[LF] < a[RF])
             temp[j++] = a[LF++];
         else
@@ -93,8 +94,10 @@ void merge(int a[], int LF, int LL,  int RF, int RL){
         temp[j++] = a[LF++];
     while(RF <= RL)
         temp[j++] =  a[RF++];
+
     for (int i = save, j = 0; i <= RL; i++, j++) {
         a[i] = temp[j];
+        swaps++; // increment swaps
     }
 
     delete  []temp;
