@@ -171,6 +171,9 @@ int main() {
     //insertionSort(data, size);
     //insertionSort(data2, size2);
 
+    mergeSort(data, 0, size - 1);
+    mergeSort(data2, 0, size2 - 1);
+
     
 
     return 0;
