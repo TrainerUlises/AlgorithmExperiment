@@ -101,6 +101,10 @@ void merge(int a[], int LF, int LL,  int RF, int RL){
     }
 
     delete  []temp;
+
+    cout << "Insertion Sort Comparisons: " << comparisons << endl;
+    cout << "Insertion Sort Swaps: " << swaps << endl;
+    
 }
 
 // Merge Sort
